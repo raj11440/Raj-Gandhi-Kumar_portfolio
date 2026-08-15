@@ -159,16 +159,20 @@ export default function Home() {
       logoAlt: 'CRRIT logo',
     },
     {
-      degree: 'Senior Secondary (Class 12)',
-      institution: 'Science stream',
-      year: 'Details pending',
-      details: 'School, board, passing year, and percentage to be updated from the marksheet',
+      degree: 'Senior Secondary (Class 12) — Humanities',
+      institution: 'Govt. Sarvodaya Boys SSS No. 2, Shakarpur, Delhi',
+      year: '2021',
+      details: 'CBSE • Core five aggregate: 58.0% • Web Application: 75/100 • Result: Pass',
+      logo: '/manus-storage/cbse-logo_a0b974d5.png',
+      logoAlt: 'CBSE logo',
     },
     {
-      degree: 'Secondary (Class 10)',
-      institution: 'School and board details pending',
-      year: 'Details pending',
-      details: 'Passing year and percentage to be updated from the marksheet',
+      degree: 'Secondary School Examination (Class 10)',
+      institution: 'Govt. Sarvodaya Boys SSS No. 2, Shakarpur, Delhi',
+      year: '2019',
+      details: 'CBSE • Core five aggregate: 49.2% • Information Technology: 74/100 • Result: Pass',
+      logo: '/manus-storage/cbse-logo_a0b974d5.png',
+      logoAlt: 'CBSE logo',
     },
   ];
 
