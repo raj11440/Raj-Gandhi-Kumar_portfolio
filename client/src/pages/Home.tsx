@@ -22,7 +22,6 @@ import {
 } from 'lucide-react';
 
 const HERO_IMAGE = 'https://files.manuscdn.com/user_upload_by_module/session_file/310519663892409792/XvHHODNUhIRofGEX.png';
-const PROFILE_IMAGE = '/manus-storage/photo_85db27d1.webp';
 const PROJECT_IMAGES = {
   hospital: 'https://files.manuscdn.com/user_upload_by_module/session_file/310519663892409792/fIlvQuMTtGKCVgkt.png',
   aiHub: 'https://files.manuscdn.com/user_upload_by_module/session_file/310519663892409792/SnVatSkHrzKhJNXx.png',
@@ -340,9 +339,9 @@ export default function Home() {
             <div className="absolute -top-5 right-8 h-24 w-24 rounded-2xl border border-blue-200 bg-blue-100/60 -rotate-6" />
             <div className="absolute -bottom-5 -right-3 h-32 w-32 rounded-full bg-cyan-300/30 blur-xl" />
             <img
-              src={PROFILE_IMAGE}
-              alt="Raj Gandhi Kumar"
-              className="relative z-10 aspect-[4/5] w-full max-w-md rounded-[2rem] border-8 border-white bg-white object-cover object-top shadow-2xl ring-1 ring-slate-200"
+              src="/manus-storage/raj-cartoon-about-angle_2143594a.png"
+              alt="Cartoon portrait of Raj Gandhi Kumar facing toward the introduction"
+              className="relative z-10 aspect-square w-full max-w-md rounded-[2rem] border-8 border-white bg-white object-cover shadow-2xl ring-1 ring-slate-200"
             />
           </div>
         </div>
