@@ -259,10 +259,10 @@ export default function Home() {
             </div>
 
             <div className="flex gap-4 pt-4">
-              <a href="#" className="p-3 bg-slate-100 hover:bg-blue-100 rounded-lg transition-colors text-slate-700 hover:text-blue-600">
+              <a href="https://github.com/raj11440" target="_blank" rel="noreferrer" aria-label="Raj Gandhi Kumar on GitHub" className="p-3 bg-slate-100 hover:bg-blue-100 rounded-lg transition-colors text-slate-700 hover:text-blue-600">
                 <Github className="w-5 h-5" />
               </a>
-              <a href="#" className="p-3 bg-slate-100 hover:bg-blue-100 rounded-lg transition-colors text-slate-700 hover:text-blue-600">
+              <a href="https://www.linkedin.com/in/raj-gandhi-k-141756199/" target="_blank" rel="noreferrer" aria-label="Raj Gandhi Kumar on LinkedIn" className="p-3 bg-slate-100 hover:bg-blue-100 rounded-lg transition-colors text-slate-700 hover:text-blue-600">
                 <Linkedin className="w-5 h-5" />
               </a>
               <a href="mailto:rg7065455@gmail.com" aria-label="Email Raj Gandhi Kumar" className="p-3 bg-slate-100 hover:bg-blue-100 rounded-lg transition-colors text-slate-700 hover:text-blue-600">
@@ -496,14 +496,21 @@ export default function Home() {
           <Card className="p-6 text-center hover:shadow-lg transition-shadow">
             <MapPin className="w-8 h-8 text-purple-600 mx-auto mb-3" />
             <p className="text-sm text-slate-600 mb-2">Location</p>
-            <p className="font-semibold text-slate-900">Delhi, India</p>
+            <a
+              href="https://www.google.com/maps/search/?api=1&query=3F%2F615%2C%201st%20Floor%2C%20Vaishali%20Sector%203%2C%20Ghaziabad%2C%20Uttar%20Pradesh%20201010"
+              target="_blank"
+              rel="noreferrer"
+              className="font-semibold text-slate-900 transition-colors hover:text-purple-600"
+            >
+              3F/615, 1st Floor, Vaishali Sector 3,<br />Ghaziabad, Uttar Pradesh 201010
+            </a>
           </Card>
 
           <div className="flex justify-center gap-4 mt-8">
-            <a href="#" className="p-4 bg-slate-100 hover:bg-blue-100 rounded-lg transition-colors text-slate-700 hover:text-blue-600">
+            <a href="https://github.com/raj11440" target="_blank" rel="noreferrer" aria-label="Raj Gandhi Kumar on GitHub" className="p-4 bg-slate-100 hover:bg-blue-100 rounded-lg transition-colors text-slate-700 hover:text-blue-600">
               <Github className="w-6 h-6" />
             </a>
-            <a href="#" className="p-4 bg-slate-100 hover:bg-blue-100 rounded-lg transition-colors text-slate-700 hover:text-blue-600">
+            <a href="https://www.linkedin.com/in/raj-gandhi-k-141756199/" target="_blank" rel="noreferrer" aria-label="Raj Gandhi Kumar on LinkedIn" className="p-4 bg-slate-100 hover:bg-blue-100 rounded-lg transition-colors text-slate-700 hover:text-blue-600">
               <Linkedin className="w-6 h-6" />
             </a>
             <a href="mailto:rg7065455@gmail.com" aria-label="Email Raj Gandhi Kumar" className="p-4 bg-slate-100 hover:bg-blue-100 rounded-lg transition-colors text-slate-700 hover:text-blue-600">
