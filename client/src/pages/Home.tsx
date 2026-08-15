@@ -195,6 +195,15 @@ export default function Home() {
       result: 'First Division • Grade A+',
       issued: '20 March 2021',
     },
+    {
+      title: 'NCC Certificate “A”',
+      issuer: 'National Cadet Corps — Delhi Directorate',
+      location: 'Unit: 3 DBN • Rank: Cadet (CDT)',
+      duration: 'Examination: 2019',
+      result: 'Certificate A — Passed',
+      issued: 'September 2020',
+      logo: '/manus-storage/ncc-logo_bd5063f4.png',
+    },
   ];
 
   return (
@@ -400,20 +409,25 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Additional Qualifications */}
+      {/* Additional Qualifications & Credentials */}
       <section className="bg-gradient-to-b from-white to-slate-50 pb-20">
         <div className="container">
           <div className="mb-8 flex items-end justify-between gap-6">
             <div>
-              <p className="mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-blue-600">Supplementary learning</p>
-              <h2 className="text-3xl font-bold text-slate-900">Additional Qualification</h2>
+              <p className="mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-blue-600">Verified credentials</p>
+              <h2 className="text-3xl font-bold text-slate-900">Additional Qualifications & Achievements</h2>
             </div>
           </div>
-          {additionalQualifications.map((qualification) => (
-            <Card key={qualification.title} className="overflow-hidden border-slate-200 bg-white shadow-sm transition-all duration-300 hover:shadow-lg">
+          <div className="grid gap-5 lg:grid-cols-2">
+            {additionalQualifications.map((qualification) => (
+              <Card key={qualification.title} className="overflow-hidden border-slate-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
               <div className="flex flex-col gap-6 p-6 sm:flex-row sm:items-center">
-                <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br from-blue-600 to-cyan-500 text-white shadow-lg shadow-blue-200">
-                  <Award className="h-8 w-8" />
+                <div className={`flex h-16 w-16 shrink-0 items-center justify-center overflow-hidden rounded-2xl shadow-lg ${qualification.logo ? 'border border-slate-200 bg-white p-2 shadow-slate-200' : 'bg-gradient-to-br from-blue-600 to-cyan-500 text-white shadow-blue-200'}`}>
+                  {qualification.logo ? (
+                    <img src={qualification.logo} alt={`${qualification.title} logo`} className="h-full w-full object-contain" />
+                  ) : (
+                    <Award className="h-8 w-8" />
+                  )}
                 </div>
                 <div className="min-w-0 flex-1">
                   <div className="flex flex-col gap-2 lg:flex-row lg:items-start lg:justify-between">
@@ -430,8 +444,9 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-            </Card>
-          ))}
+              </Card>
+            ))}
+          </div>
         </div>
       </section>
 
