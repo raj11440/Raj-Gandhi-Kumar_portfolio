@@ -186,7 +186,7 @@ export default function Home() {
               <Download className="w-4 h-4 mr-2" />
               Resume
             </Button>
-            <Button size="sm" className="bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-700 hover:to-cyan-600">
+            <Button onClick={() => scrollToSection('contact')} size="sm" className="bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-700 hover:to-cyan-600">
               Hire Me
             </Button>
           </div>
@@ -218,7 +218,7 @@ export default function Home() {
                   <Download className="w-4 h-4 mr-2" />
                   Resume
                 </Button>
-                <Button className="w-full bg-gradient-to-r from-blue-600 to-cyan-500" size="sm">
+                <Button onClick={() => scrollToSection('contact')} className="w-full bg-gradient-to-r from-blue-600 to-cyan-500" size="sm">
                   Hire Me
                 </Button>
               </div>
@@ -248,7 +248,7 @@ export default function Home() {
             </p>
 
             <div className="flex flex-wrap gap-3">
-              <Button className="bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-700 hover:to-cyan-600 text-white px-6 h-12">
+              <Button onClick={() => scrollToSection('contact')} className="bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-700 hover:to-cyan-600 text-white px-6 h-12">
                 <Briefcase className="w-4 h-4 mr-2" />
                 Hire Me
               </Button>
@@ -265,7 +265,7 @@ export default function Home() {
               <a href="#" className="p-3 bg-slate-100 hover:bg-blue-100 rounded-lg transition-colors text-slate-700 hover:text-blue-600">
                 <Linkedin className="w-5 h-5" />
               </a>
-              <a href="#" className="p-3 bg-slate-100 hover:bg-blue-100 rounded-lg transition-colors text-slate-700 hover:text-blue-600">
+              <a href="mailto:rg7065455@gmail.com" aria-label="Email Raj Gandhi Kumar" className="p-3 bg-slate-100 hover:bg-blue-100 rounded-lg transition-colors text-slate-700 hover:text-blue-600">
                 <Mail className="w-5 h-5" />
               </a>
             </div>
@@ -480,12 +480,16 @@ export default function Home() {
             <Card className="p-6 text-center hover:shadow-lg transition-shadow">
               <Mail className="w-8 h-8 text-blue-600 mx-auto mb-3" />
               <p className="text-sm text-slate-600 mb-2">Email</p>
-              <p className="font-semibold text-slate-900">To be updated</p>
+              <a href="mailto:rg7065455@gmail.com" className="font-semibold text-slate-900 transition-colors hover:text-blue-600">
+                rg7065455@gmail.com
+              </a>
             </Card>
             <Card className="p-6 text-center hover:shadow-lg transition-shadow">
               <Phone className="w-8 h-8 text-cyan-600 mx-auto mb-3" />
               <p className="text-sm text-slate-600 mb-2">Phone</p>
-              <p className="font-semibold text-slate-900">To be updated</p>
+              <a href="tel:+919416255389" className="font-semibold text-slate-900 transition-colors hover:text-cyan-600">
+                +91 94162 55389
+              </a>
             </Card>
           </div>
 
@@ -502,7 +506,7 @@ export default function Home() {
             <a href="#" className="p-4 bg-slate-100 hover:bg-blue-100 rounded-lg transition-colors text-slate-700 hover:text-blue-600">
               <Linkedin className="w-6 h-6" />
             </a>
-            <a href="#" className="p-4 bg-slate-100 hover:bg-blue-100 rounded-lg transition-colors text-slate-700 hover:text-blue-600">
+            <a href="mailto:rg7065455@gmail.com" aria-label="Email Raj Gandhi Kumar" className="p-4 bg-slate-100 hover:bg-blue-100 rounded-lg transition-colors text-slate-700 hover:text-blue-600">
               <Mail className="w-6 h-6" />
             </a>
           </div>
