@@ -153,8 +153,8 @@ export default function Home() {
     {
       degree: 'Diploma in Electronics & Communication Engineering',
       institution: 'Chhotu Ram Rural Institute of Technology (CRRIT), Kanjhawala, Delhi',
-      year: 'Passed 2024',
-      details: 'Board of Technical Education (BTE), Delhi',
+      year: 'Completed 2024',
+      details: 'Board of Technical Education (BTE), Delhi • First Division • 1,750/2,540 marks • 68.89%',
       logo: '/manus-storage/crrit-logo_1386ae5d.png',
       logoAlt: 'CRRIT logo',
     },
