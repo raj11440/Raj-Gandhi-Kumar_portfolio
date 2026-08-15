@@ -59,11 +59,44 @@ export default function Home() {
     { label: 'Contact', id: 'contact' },
   ];
 
-  const skills = {
-    programming: ['Python', 'JavaScript', 'HTML', 'CSS'],
-    aiData: ['Machine Learning', 'Data Analytics', 'AI/ML'],
-    engineering: ['Networking', 'MATLAB', 'Electronics & Communication'],
-  };
+  const skillGroups = [
+    {
+      title: 'Core Development',
+      subtitle: 'Programming foundations',
+      accent: 'blue',
+      skills: [
+        { name: 'Python', level: 'Basic', logo: '/manus-storage/python_827bd3ca.svg' },
+        { name: 'HTML', level: 'Basic', logo: '/manus-storage/html5_a440d297.svg' },
+        { name: 'CSS', level: 'Basic', logo: '/manus-storage/css_9d7ce49a.svg' },
+        { name: 'JavaScript', level: 'Basic', logo: '/manus-storage/javascript_850fc213.svg' },
+        { name: 'GitHub', level: 'Version control', logo: '/manus-storage/github_457bd28f.svg' },
+      ],
+    },
+    {
+      title: 'Data & Engineering',
+      subtitle: 'Conceptual and academic exposure',
+      accent: 'cyan',
+      skills: [
+        { name: 'Machine Learning', level: 'Concepts', logo: '/manus-storage/scikitlearn_3e897336.svg' },
+        { name: 'Data Analytics', level: 'Basics', logo: '/manus-storage/googleanalytics_cf0fb32e.svg' },
+        { name: 'Google Colab', level: 'Notebook workflow', logo: '/manus-storage/googlecolab_ab719db1.svg' },
+        { name: 'MATLAB', level: 'Academic', logo: '/manus-storage/matlab_2f3839ea.png' },
+        { name: 'Microsoft Excel', level: 'Productivity', logo: '/manus-storage/excel_7e19ac79.png' },
+      ],
+    },
+    {
+      title: 'AI Tools & Workflow',
+      subtitle: 'AI-assisted building and ideation',
+      accent: 'purple',
+      skills: [
+        { name: 'AI Tools', level: 'Practical use' },
+        { name: 'ChatGPT', level: 'AI assistant', logo: '/manus-storage/chatgpt_27fda54e.png' },
+        { name: 'Gemini', level: 'AI assistant', logo: '/manus-storage/googlegemini_07f0b5b6.svg' },
+        { name: 'AI-assisted Projects', level: 'Development workflow' },
+        { name: 'Prompt Engineering', level: 'Prompt design' },
+      ],
+    },
+  ];
 
   const projects = [
     {
@@ -354,58 +387,53 @@ export default function Home() {
       {/* Skills Section */}
       <section id="skills" className="py-20 bg-white">
         <div className="container">
-          <h2 className="text-4xl font-bold text-slate-900 mb-12">Skills & Expertise</h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            {/* Programming */}
-            <Card className="p-6 hover:shadow-lg transition-all hover:border-blue-200">
-              <div className="flex items-center gap-3 mb-4">
-                <div className="p-3 bg-blue-100 rounded-lg">
-                  <Code2 className="w-6 h-6 text-blue-600" />
-                </div>
-                <h3 className="text-xl font-bold text-slate-900">Programming</h3>
-              </div>
-              <div className="flex flex-wrap gap-2">
-                {skills.programming.map((skill) => (
-                  <span key={skill} className="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-sm font-medium">
-                    {skill}
-                  </span>
-                ))}
-              </div>
-            </Card>
+          <div className="mb-12 max-w-2xl">
+            <p className="mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-blue-600">Technical toolkit</p>
+            <h2 className="text-4xl font-bold text-slate-900">Skills & AI Tools</h2>
+            <p className="mt-4 text-lg leading-relaxed text-slate-600">
+              A transparent view of my current foundations, academic exposure, and AI-assisted development workflow.
+            </p>
+          </div>
 
-            {/* AI & Data Science */}
-            <Card className="p-6 hover:shadow-lg transition-all hover:border-cyan-200">
-              <div className="flex items-center gap-3 mb-4">
-                <div className="p-3 bg-cyan-100 rounded-lg">
-                  <Brain className="w-6 h-6 text-cyan-600" />
-                </div>
-                <h3 className="text-xl font-bold text-slate-900">AI & Data Science</h3>
-              </div>
-              <div className="flex flex-wrap gap-2">
-                {skills.aiData.map((skill) => (
-                  <span key={skill} className="px-3 py-1 bg-cyan-50 text-cyan-700 rounded-full text-sm font-medium">
-                    {skill}
-                  </span>
-                ))}
-              </div>
-            </Card>
+          <div className="grid gap-6 lg:grid-cols-3">
+            {skillGroups.map((group, groupIndex) => (
+              <Card key={group.title} className="overflow-hidden border-slate-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
+                <div className={`h-1.5 ${group.accent === 'blue' ? 'bg-blue-600' : group.accent === 'cyan' ? 'bg-cyan-500' : 'bg-purple-500'}`} />
+                <div className="p-6">
+                  <div className="mb-6 flex items-center gap-3">
+                    <div className={`flex h-11 w-11 items-center justify-center rounded-xl ${group.accent === 'blue' ? 'bg-blue-50 text-blue-600' : group.accent === 'cyan' ? 'bg-cyan-50 text-cyan-600' : 'bg-purple-50 text-purple-600'}`}>
+                      {groupIndex === 0 ? <Code2 className="h-5 w-5" /> : groupIndex === 1 ? <Brain className="h-5 w-5" /> : <Zap className="h-5 w-5" />}
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-bold text-slate-900">{group.title}</h3>
+                      <p className="text-sm text-slate-500">{group.subtitle}</p>
+                    </div>
+                  </div>
 
-            {/* Engineering */}
-            <Card className="p-6 hover:shadow-lg transition-all hover:border-purple-200">
-              <div className="flex items-center gap-3 mb-4">
-                <div className="p-3 bg-purple-100 rounded-lg">
-                  <Zap className="w-6 h-6 text-purple-600" />
+                  <div className="space-y-3">
+                    {group.skills.map((skill) => (
+                      <div key={skill.name} className="group/skill flex items-center gap-4 rounded-xl border border-slate-100 bg-slate-50/70 p-3 transition-all duration-200 hover:border-blue-200 hover:bg-white hover:shadow-md">
+                        <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-slate-200 bg-white p-2 shadow-sm">
+                          {skill.logo ? (
+                            <img src={skill.logo} alt={`${skill.name} logo`} className="h-full w-full object-contain" />
+                          ) : skill.name === 'Prompt Engineering' ? (
+                            <Zap className="h-6 w-6 text-purple-600" />
+                          ) : skill.name === 'AI-assisted Projects' ? (
+                            <Code2 className="h-6 w-6 text-purple-600" />
+                          ) : (
+                            <Brain className="h-6 w-6 text-purple-600" />
+                          )}
+                        </div>
+                        <div className="min-w-0">
+                          <p className="font-semibold text-slate-900">{skill.name}</p>
+                          <p className="text-sm text-slate-500">{skill.level}</p>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
                 </div>
-                <h3 className="text-xl font-bold text-slate-900">Engineering</h3>
-              </div>
-              <div className="flex flex-wrap gap-2">
-                {skills.engineering.map((skill) => (
-                  <span key={skill} className="px-3 py-1 bg-purple-50 text-purple-700 rounded-full text-sm font-medium">
-                    {skill}
-                  </span>
-                ))}
-              </div>
-            </Card>
+              </Card>
+            ))}
           </div>
         </div>
       </section>
