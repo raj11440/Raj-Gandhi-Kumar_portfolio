@@ -355,9 +355,26 @@ export default function Home() {
       {/* About Section */}
       <section id="about" className="py-20 bg-white">
         <div className="container">
-          <div className="max-w-3xl">
-            <h2 className="text-4xl font-bold text-slate-900 mb-6">About Me</h2>
-            <div className="space-y-4 text-slate-600 text-lg leading-relaxed">
+          <div className="grid items-center gap-12 lg:grid-cols-[0.8fr_1.2fr]">
+            <div className="relative mx-auto w-full max-w-md lg:mx-0">
+              <div className="absolute -inset-4 rounded-[2rem] bg-gradient-to-br from-blue-100 via-cyan-50 to-purple-100 blur-2xl" />
+              <div className="relative overflow-hidden rounded-[2rem] border border-slate-200 bg-white p-2 shadow-xl">
+                <img
+                  src="/manus-storage/raj-cartoon-about_98507f28.png"
+                  alt="Professional cartoon portrait of Raj Gandhi Kumar"
+                  className="aspect-square w-full rounded-[1.55rem] object-cover"
+                />
+              </div>
+              <div className="absolute -bottom-5 -right-3 rounded-2xl border border-blue-100 bg-white/95 px-5 py-3 shadow-lg backdrop-blur">
+                <p className="text-xs font-semibold uppercase tracking-[0.16em] text-blue-600">Engineer in progress</p>
+                <p className="mt-1 text-sm font-medium text-slate-700">ECE • Software • AI/ML</p>
+              </div>
+            </div>
+
+            <div>
+              <p className="mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-blue-600">The person behind the projects</p>
+              <h2 className="text-4xl font-bold text-slate-900 mb-6">About Me</h2>
+              <div className="space-y-4 text-slate-600 text-lg leading-relaxed">
               <p>
                 I'm Raj Gandhi Kumar, born on 02 October 2002, and currently pursuing B.Tech in Electronics & Communication Engineering at Maharaja Surajmal Institute of Technology, affiliated with GGSIPU. I entered the program through lateral entry after completing my ECE diploma.
               </p>
@@ -370,6 +387,7 @@ export default function Home() {
               <p>
                 Currently seeking opportunities as a Software Engineer, Data Analyst, or AI/ML Engineer where I can contribute my technical skills and continue learning from industry experts.
               </p>
+            </div>
             </div>
           </div>
         </div>
