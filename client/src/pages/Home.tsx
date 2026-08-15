@@ -355,8 +355,8 @@ export default function Home() {
       {/* About Section */}
       <section id="about" className="py-20 bg-white">
         <div className="container">
-          <div className="grid items-center gap-12 lg:grid-cols-[0.8fr_1.2fr]">
-            <div className="relative mx-auto w-full max-w-md lg:mx-0">
+          <div className="grid items-center gap-12 lg:grid-cols-[1.2fr_0.8fr]">
+            <div className="relative order-2 mx-auto w-full max-w-md lg:mx-0">
               <div className="absolute -inset-4 rounded-[2rem] bg-gradient-to-br from-blue-100 via-cyan-50 to-purple-100 blur-2xl" />
               <div className="relative overflow-hidden rounded-[2rem] border border-slate-200 bg-white p-2 shadow-xl">
                 <img
@@ -371,7 +371,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div>
+            <div className="order-1">
               <p className="mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-blue-600">The person behind the projects</p>
               <h2 className="text-4xl font-bold text-slate-900 mb-6">About Me</h2>
               <div className="space-y-4 text-slate-600 text-lg leading-relaxed">
