@@ -12,6 +12,9 @@ import {
   GraduationCap,
   School,
   Award,
+  Star,
+  Sparkles,
+  Orbit,
   Menu,
   X,
   ChevronDown,
@@ -355,18 +358,44 @@ export default function Home() {
       <section id="about" className="py-20 bg-white">
         <div className="container">
           <div className="grid items-center gap-12 lg:grid-cols-[1.2fr_0.8fr]">
-            <div className="relative order-2 mx-auto w-full max-w-md lg:mx-0">
-              <div className="absolute -inset-4 rounded-[2rem] bg-gradient-to-br from-blue-100 via-cyan-50 to-purple-100 blur-2xl" />
-              <div className="relative overflow-hidden rounded-[2rem] border border-slate-200 bg-white p-2 shadow-xl">
-                <img
-                  src="/manus-storage/raj-cartoon-about-angle_2143594a.png"
-                  alt="Professional cartoon portrait of Raj Gandhi Kumar facing toward the About Me text"
-                  className="aspect-square w-full rounded-[1.55rem] object-cover"
-                />
-              </div>
-              <div className="absolute -bottom-5 -right-3 rounded-2xl border border-blue-100 bg-white/95 px-5 py-3 shadow-lg backdrop-blur">
-                <p className="text-xs font-semibold uppercase tracking-[0.16em] text-blue-600">Engineer in progress</p>
-                <p className="mt-1 text-sm font-medium text-slate-700">ECE • Software • AI/ML</p>
+            <div className="relative order-2 mx-auto aspect-square w-full max-w-md lg:mx-0" aria-label="Animated illustration representing curiosity, learning, and engineering growth">
+              <div className="absolute inset-8 rounded-full bg-gradient-to-br from-blue-300/40 via-cyan-200/30 to-purple-300/40 blur-3xl" />
+              <div className="relative h-full overflow-hidden rounded-[2rem] border border-blue-100 bg-gradient-to-br from-slate-50 via-white to-blue-50 shadow-xl">
+                <div className="absolute inset-0 opacity-40 [background-image:radial-gradient(#2563eb_1px,transparent_1px)] [background-size:22px_22px]" />
+
+                <div className="absolute inset-10 rounded-full border border-blue-200/80" />
+                <div className="absolute inset-[5.5rem] rounded-full border border-dashed border-cyan-300/90" />
+                <div className="absolute inset-[8rem] rounded-full border border-purple-200/90" />
+
+                <div className="absolute inset-10 motion-safe:animate-[spin_18s_linear_infinite]" aria-hidden="true">
+                  <div className="absolute left-1/2 top-0 -translate-x-1/2 -translate-y-1/2 rounded-xl bg-white p-2 shadow-lg ring-1 ring-blue-100">
+                    <Star className="h-6 w-6 fill-blue-500 text-blue-500" />
+                  </div>
+                  <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 rounded-xl bg-white p-2 shadow-lg ring-1 ring-cyan-100">
+                    <Sparkles className="h-6 w-6 text-cyan-500" />
+                  </div>
+                </div>
+
+                <div className="absolute inset-[5.5rem] motion-safe:animate-[spin_12s_linear_infinite_reverse]" aria-hidden="true">
+                  <div className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/2 rounded-full bg-purple-500 p-2.5 text-white shadow-lg shadow-purple-200">
+                    <Orbit className="h-5 w-5" />
+                  </div>
+                  <div className="absolute left-0 top-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full bg-cyan-500 p-2 shadow-lg shadow-cyan-200">
+                    <span className="block h-3 w-3 rounded-full bg-white" />
+                  </div>
+                </div>
+
+                <div className="absolute left-1/2 top-1/2 flex h-32 w-32 -translate-x-1/2 -translate-y-1/2 rotate-12 items-center justify-center rounded-[2rem] bg-gradient-to-br from-blue-600 via-cyan-500 to-purple-500 text-white shadow-2xl shadow-blue-300/50 transition-transform duration-300 hover:rotate-0 hover:scale-105">
+                  <Star className="h-16 w-16 -rotate-12 fill-white text-white" />
+                </div>
+
+                <Sparkles className="absolute left-10 top-12 h-7 w-7 text-cyan-400 motion-safe:animate-pulse" aria-hidden="true" />
+                <Star className="absolute bottom-16 right-12 h-5 w-5 fill-purple-400 text-purple-400 motion-safe:animate-pulse" aria-hidden="true" />
+
+                <div className="absolute bottom-6 left-1/2 w-max -translate-x-1/2 rounded-full border border-blue-100 bg-white/90 px-5 py-2 text-center shadow-lg backdrop-blur">
+                  <p className="text-xs font-semibold uppercase tracking-[0.16em] text-blue-600">Curiosity in motion</p>
+                  <p className="mt-0.5 text-sm font-medium text-slate-700">Learn • Build • Improve</p>
+                </div>
               </div>
             </div>
 
