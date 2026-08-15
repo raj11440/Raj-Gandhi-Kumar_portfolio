@@ -11,6 +11,7 @@ import {
   Download,
   GraduationCap,
   School,
+  Award,
   Menu,
   X,
   ChevronDown,
@@ -182,6 +183,17 @@ export default function Home() {
       company: 'Delhi Metro Rail Corporation (DMRC)',
       duration: '2023',
       description: 'Completed an internship in the Telecom department, gaining practical exposure to telecom and networking systems used in metro operations.',
+    },
+  ];
+
+  const additionalQualifications = [
+    {
+      title: 'Diploma in Information Technology',
+      issuer: 'Dr. Bhim Rao Ambedkar Technical Training Institute',
+      location: 'Vaishali, Ghaziabad, Uttar Pradesh',
+      duration: 'One-year course',
+      result: 'First Division • Grade A+',
+      issued: '20 March 2021',
     },
   ];
 
@@ -385,6 +397,41 @@ export default function Home() {
               </Card>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Additional Qualifications */}
+      <section className="bg-gradient-to-b from-white to-slate-50 pb-20">
+        <div className="container">
+          <div className="mb-8 flex items-end justify-between gap-6">
+            <div>
+              <p className="mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-blue-600">Supplementary learning</p>
+              <h2 className="text-3xl font-bold text-slate-900">Additional Qualification</h2>
+            </div>
+          </div>
+          {additionalQualifications.map((qualification) => (
+            <Card key={qualification.title} className="overflow-hidden border-slate-200 bg-white shadow-sm transition-all duration-300 hover:shadow-lg">
+              <div className="flex flex-col gap-6 p-6 sm:flex-row sm:items-center">
+                <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br from-blue-600 to-cyan-500 text-white shadow-lg shadow-blue-200">
+                  <Award className="h-8 w-8" />
+                </div>
+                <div className="min-w-0 flex-1">
+                  <div className="flex flex-col gap-2 lg:flex-row lg:items-start lg:justify-between">
+                    <div>
+                      <h3 className="text-xl font-bold text-slate-900">{qualification.title}</h3>
+                      <p className="font-semibold text-blue-600">{qualification.issuer}</p>
+                      <p className="mt-1 text-sm text-slate-500">{qualification.location}</p>
+                    </div>
+                    <span className="w-fit shrink-0 rounded-full bg-blue-50 px-3 py-1 text-sm font-semibold text-blue-700">Issued {qualification.issued}</span>
+                  </div>
+                  <div className="mt-4 flex flex-wrap gap-2">
+                    <span className="rounded-full bg-slate-100 px-3 py-1 text-sm font-medium text-slate-700">{qualification.duration}</span>
+                    <span className="rounded-full bg-emerald-50 px-3 py-1 text-sm font-semibold text-emerald-700">{qualification.result}</span>
+                  </div>
+                </div>
+              </div>
+            </Card>
+          ))}
         </div>
       </section>
 
