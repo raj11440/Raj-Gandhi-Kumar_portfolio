@@ -360,8 +360,8 @@ export default function Home() {
               <div className="absolute -inset-4 rounded-[2rem] bg-gradient-to-br from-blue-100 via-cyan-50 to-purple-100 blur-2xl" />
               <div className="relative overflow-hidden rounded-[2rem] border border-slate-200 bg-white p-2 shadow-xl">
                 <img
-                  src="/manus-storage/raj-cartoon-about_98507f28.png"
-                  alt="Professional cartoon portrait of Raj Gandhi Kumar"
+                  src="/manus-storage/raj-cartoon-about-angle_2143594a.png"
+                  alt="Professional cartoon portrait of Raj Gandhi Kumar facing toward the About Me text"
                   className="aspect-square w-full rounded-[1.55rem] object-cover"
                 />
               </div>
