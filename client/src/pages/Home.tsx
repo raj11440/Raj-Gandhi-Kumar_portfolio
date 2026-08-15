@@ -15,11 +15,7 @@ import {
   Code2,
   Brain,
   Zap,
-  Award,
-  BookOpen,
   Briefcase,
-  Star,
-  ArrowRight,
 } from 'lucide-react';
 
 const HERO_IMAGE = 'https://files.manuscdn.com/user_upload_by_module/session_file/310519663892409792/XvHHODNUhIRofGEX.png';
@@ -58,22 +54,21 @@ export default function Home() {
     { label: 'Skills', id: 'skills' },
     { label: 'Projects', id: 'projects' },
     { label: 'Experience', id: 'experience' },
-    { label: 'Certifications', id: 'certifications' },
     { label: 'Contact', id: 'contact' },
   ];
 
   const skills = {
-    programming: ['Python', 'JavaScript', 'HTML', 'CSS', 'TypeScript', 'React'],
-    aiData: ['Machine Learning', 'Data Analytics', 'TensorFlow', 'Pandas', 'NumPy', 'Data Visualization'],
-    engineering: ['Digital Communication', 'Networking', 'MATLAB', 'Electronics', 'Signal Processing', 'Embedded Systems'],
+    programming: ['Python', 'JavaScript', 'HTML', 'CSS'],
+    aiData: ['Machine Learning', 'Data Analytics', 'AI/ML'],
+    engineering: ['Networking', 'MATLAB', 'Electronics & Communication'],
   };
 
   const projects = [
     {
       title: 'Hospital Readmission Prediction',
-      description: 'AI-powered system predicting patient readmission risk using ML algorithms. Achieved 87.6% accuracy with comprehensive data analytics.',
+      description: 'Machine-learning project focused on analyzing healthcare data and estimating the likelihood of patient readmission.',
       image: PROJECT_IMAGES.hospital,
-      tech: ['Python', 'Machine Learning', 'Data Analytics', 'TensorFlow'],
+      tech: ['Python', 'Machine Learning', 'Data Analytics'],
       github: '#',
       live: '#',
     },
@@ -81,15 +76,15 @@ export default function Home() {
       title: 'Student AI Hub',
       description: 'Collaborative learning platform with AI chatbot, code editor, and curated resources for student development.',
       image: PROJECT_IMAGES.aiHub,
-      tech: ['React', 'Python', 'AI/ML', 'Web Development'],
+      tech: ['HTML', 'CSS', 'JavaScript', 'AI/ML'],
       github: '#',
       live: '#',
     },
     {
       title: 'Face Pattern Recognition System',
-      description: 'Computer vision system for face detection and pattern analysis with 92% recognition accuracy.',
+      description: 'AI/ML project exploring face detection, feature patterns, and recognition workflows.',
       image: PROJECT_IMAGES.faceRecognition,
-      tech: ['Python', 'OpenCV', 'Deep Learning', 'Computer Vision'],
+      tech: ['Python', 'Machine Learning', 'AI/ML'],
       github: '#',
       live: '#',
     },
@@ -97,7 +92,7 @@ export default function Home() {
       title: 'Personal Portfolio Website',
       description: 'Responsive portfolio showcasing projects and skills with modern design and smooth interactions.',
       image: HERO_IMAGE,
-      tech: ['React', 'TypeScript', 'Tailwind CSS', 'Web Design'],
+      tech: ['HTML', 'CSS', 'JavaScript', 'Web Design'],
       github: '#',
       live: '#',
     },
@@ -105,7 +100,7 @@ export default function Home() {
       title: 'Data Analytics Dashboard',
       description: 'Interactive dashboard for real-time data visualization and business intelligence insights.',
       image: HERO_IMAGE,
-      tech: ['React', 'Recharts', 'Data Visualization', 'Analytics'],
+      tech: ['Python', 'Data Analytics', 'Data Visualization'],
       github: '#',
       live: '#',
     },
@@ -114,53 +109,37 @@ export default function Home() {
   const education = [
     {
       degree: 'B.Tech in Electronics & Communication Engineering',
-      institution: 'Maharaja Surajmal Institute of Technology (MSIT), Delhi',
-      year: '2022 - 2026',
-      details: 'Specialization in Digital Communication and Signal Processing',
+      institution: 'Maharaja Surajmal Institute of Technology (MSIT), Janakpuri, Delhi',
+      year: '2024 - Present',
+      details: 'Guru Gobind Singh Indraprastha University (GGSIPU) • Lateral Entry • 6th semester examination completed',
     },
     {
       degree: 'Diploma in Electronics & Communication Engineering',
-      institution: 'CRRIT, Delhi',
-      year: '2019 - 2022',
-      details: 'Foundation in electronics, networking, and embedded systems',
+      institution: 'Chhotu Ram Rural Institute of Technology (CRRIT), Kanjhawala, Delhi',
+      year: 'Passed 2024',
+      details: 'Board of Technical Education (BTE), Delhi',
     },
     {
-      degree: '12th Grade',
-      institution: 'Central Board of Secondary Education (CBSE)',
-      year: '2018 - 2019',
-      details: 'Science Stream - PCM',
+      degree: 'Senior Secondary (Class 12)',
+      institution: 'Science stream',
+      year: 'Details pending',
+      details: 'School, board, passing year, and percentage to be updated from the marksheet',
     },
     {
-      degree: '10th Grade',
-      institution: 'Central Board of Secondary Education (CBSE)',
-      year: '2016 - 2017',
-      details: 'General Education',
+      degree: 'Secondary (Class 10)',
+      institution: 'School and board details pending',
+      year: 'Details pending',
+      details: 'Passing year and percentage to be updated from the marksheet',
     },
   ];
 
   const experience = [
     {
-      title: 'Intern - Electronics & Networking',
+      title: 'Telecom Intern',
       company: 'Delhi Metro Rail Corporation (DMRC)',
-      duration: '3 months',
-      description: 'Worked on networking infrastructure and electronic systems. Gained hands-on experience with real-world engineering challenges.',
+      duration: '2023',
+      description: 'Completed an internship in the Telecom department, gaining practical exposure to telecom and networking systems used in metro operations.',
     },
-  ];
-
-  const certifications = [
-    'Python for Data Science - Coursera',
-    'Machine Learning Specialization - Andrew Ng',
-    'Web Development Bootcamp - Udemy',
-    'Digital Signal Processing - NPTEL',
-    'Embedded Systems Fundamentals - LinkedIn Learning',
-  ];
-
-  const achievements = [
-    'Top 10% in B.Tech Program',
-    'Winner - Inter-College Hackathon 2024',
-    'Published Research Paper on AI in Healthcare',
-    'AWS Certified Cloud Practitioner',
-    'Selected for Google Summer of Code 2024',
   ];
 
   return (
@@ -259,7 +238,7 @@ export default function Home() {
             </div>
 
             <p className="text-lg text-slate-600 leading-relaxed">
-              B.Tech Electronics & Communication Engineering student at MSIT, Delhi. Passionate about building intelligent systems, data-driven solutions, and innovative software. Experienced in Python, Machine Learning, Web Development, and embedded systems.
+              B.Tech Electronics & Communication Engineering student at MSIT, GGSIPU, admitted through lateral entry after completing a diploma in ECE. Skilled in Python, web technologies, machine learning, data analytics, MATLAB, and networking.
             </p>
 
             <div className="flex flex-wrap gap-3">
@@ -310,10 +289,10 @@ export default function Home() {
             <h2 className="text-4xl font-bold text-slate-900 mb-6">About Me</h2>
             <div className="space-y-4 text-slate-600 text-lg leading-relaxed">
               <p>
-                I'm a passionate ECE engineering student with a strong foundation in electronics, networking, and digital communication. My journey has evolved from understanding hardware fundamentals to exploring the intersection of AI, data science, and software development.
+                I'm Raj Gandhi Kumar, born on 02 October 2002, and currently pursuing B.Tech in Electronics & Communication Engineering at Maharaja Surajmal Institute of Technology, affiliated with GGSIPU. I entered the program through lateral entry after completing my ECE diploma.
               </p>
               <p>
-                At MSIT, Delhi, I've developed expertise in Python, machine learning, and web technologies. My internship at Delhi Metro Rail Corporation provided practical experience with real-world engineering challenges and networking infrastructure.
+                I have completed my 6th semester examination and continue to build practical skills in Python, HTML, CSS, JavaScript, machine learning, data analytics, MATLAB, networking, and AI/ML. My 2023 internship in DMRC's Telecom department provided exposure to professional telecom and networking systems.
               </p>
               <p>
                 I'm driven by the challenge of building intelligent systems that solve real problems. Whether it's predicting healthcare outcomes, creating collaborative learning platforms, or developing computer vision applications, I approach each project with curiosity and precision.
@@ -468,36 +447,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Certifications Section */}
-      <section id="certifications" className="py-20 bg-gradient-to-b from-slate-50 to-white">
-        <div className="container">
-          <h2 className="text-4xl font-bold text-slate-900 mb-12">Certifications</h2>
-          <div className="grid md:grid-cols-2 gap-4">
-            {certifications.map((cert, idx) => (
-              <Card key={idx} className="p-4 flex items-center gap-4 hover:shadow-lg transition-shadow hover:border-blue-200">
-                <Award className="w-6 h-6 text-blue-600 flex-shrink-0" />
-                <p className="text-slate-700 font-medium">{cert}</p>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Achievements Section */}
-      <section className="py-20 bg-white">
-        <div className="container">
-          <h2 className="text-4xl font-bold text-slate-900 mb-12">Achievements</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {achievements.map((achievement, idx) => (
-              <Card key={idx} className="p-6 text-center hover:shadow-lg transition-all hover:scale-105 duration-300">
-                <Star className="w-8 h-8 text-yellow-500 mx-auto mb-3" />
-                <p className="text-slate-700 font-medium">{achievement}</p>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Contact Section */}
       <section id="contact" className="py-20 bg-gradient-to-b from-blue-50 to-cyan-50">
         <div className="container max-w-2xl">
@@ -512,16 +461,12 @@ export default function Home() {
             <Card className="p-6 text-center hover:shadow-lg transition-shadow">
               <Mail className="w-8 h-8 text-blue-600 mx-auto mb-3" />
               <p className="text-sm text-slate-600 mb-2">Email</p>
-              <a href="mailto:raj.gandhi@example.com" className="font-semibold text-slate-900 hover:text-blue-600">
-                raj.gandhi@example.com
-              </a>
+              <p className="font-semibold text-slate-900">To be updated</p>
             </Card>
             <Card className="p-6 text-center hover:shadow-lg transition-shadow">
               <Phone className="w-8 h-8 text-cyan-600 mx-auto mb-3" />
               <p className="text-sm text-slate-600 mb-2">Phone</p>
-              <a href="tel:+919876543210" className="font-semibold text-slate-900 hover:text-cyan-600">
-                +91 98765 43210
-              </a>
+              <p className="font-semibold text-slate-900">To be updated</p>
             </Card>
           </div>
 
