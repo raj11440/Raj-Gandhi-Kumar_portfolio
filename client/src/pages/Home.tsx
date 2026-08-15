@@ -182,9 +182,11 @@ export default function Home() {
 
           {/* Desktop CTA */}
           <div className="hidden md:flex gap-2">
-            <Button variant="outline" size="sm">
-              <Download className="w-4 h-4 mr-2" />
-              Resume
+            <Button asChild variant="outline" size="sm">
+              <a href="https://drive.google.com/file/d/1tUHMJUhZdnIIcbe1p2OZhBuM7w_SEqdf/view?usp=drive_link" target="_blank" rel="noreferrer">
+                <Download className="w-4 h-4 mr-2" />
+                Resume
+              </a>
             </Button>
             <Button onClick={() => scrollToSection('contact')} size="sm" className="bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-700 hover:to-cyan-600">
               Hire Me
@@ -214,9 +216,11 @@ export default function Home() {
                 </button>
               ))}
               <div className="pt-2 space-y-2">
-                <Button variant="outline" className="w-full" size="sm">
-                  <Download className="w-4 h-4 mr-2" />
-                  Resume
+                <Button asChild variant="outline" className="w-full" size="sm">
+                  <a href="https://drive.google.com/file/d/1tUHMJUhZdnIIcbe1p2OZhBuM7w_SEqdf/view?usp=drive_link" target="_blank" rel="noreferrer">
+                    <Download className="w-4 h-4 mr-2" />
+                    Resume
+                  </a>
                 </Button>
                 <Button onClick={() => scrollToSection('contact')} className="w-full bg-gradient-to-r from-blue-600 to-cyan-500" size="sm">
                   Hire Me
@@ -252,9 +256,11 @@ export default function Home() {
                 <Briefcase className="w-4 h-4 mr-2" />
                 Hire Me
               </Button>
-              <Button variant="outline" className="px-6 h-12">
-                <Download className="w-4 h-4 mr-2" />
-                Download Resume
+              <Button asChild variant="outline" className="px-6 h-12">
+                <a href="https://drive.google.com/file/d/1tUHMJUhZdnIIcbe1p2OZhBuM7w_SEqdf/view?usp=drive_link" target="_blank" rel="noreferrer">
+                  <Download className="w-4 h-4 mr-2" />
+                  Download Resume
+                </a>
               </Button>
             </div>
 
