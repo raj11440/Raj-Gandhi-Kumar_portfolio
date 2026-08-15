@@ -9,6 +9,8 @@ import {
   MapPin,
   ExternalLink,
   Download,
+  GraduationCap,
+  School,
   Menu,
   X,
   ChevronDown,
@@ -112,12 +114,16 @@ export default function Home() {
       institution: 'Maharaja Surajmal Institute of Technology (MSIT), Janakpuri, Delhi',
       year: '2024 - Present',
       details: 'Guru Gobind Singh Indraprastha University (GGSIPU) • Lateral Entry • 6th semester examination completed',
+      logo: '/manus-storage/ggsipu-logo_38d992ff.png',
+      logoAlt: 'GGSIPU logo',
     },
     {
       degree: 'Diploma in Electronics & Communication Engineering',
       institution: 'Chhotu Ram Rural Institute of Technology (CRRIT), Kanjhawala, Delhi',
       year: 'Passed 2024',
       details: 'Board of Technical Education (BTE), Delhi',
+      logo: '/manus-storage/crrit-logo_1386ae5d.png',
+      logoAlt: 'CRRIT logo',
     },
     {
       degree: 'Senior Secondary (Class 12)',
@@ -312,14 +318,27 @@ export default function Home() {
           <div className="space-y-6">
             {education.map((edu, idx) => (
               <Card key={idx} className="p-6 border-l-4 border-l-blue-600 hover:shadow-lg transition-shadow">
-                <div className="flex items-start justify-between mb-2">
-                  <div>
-                    <h3 className="text-xl font-bold text-slate-900">{edu.degree}</h3>
-                    <p className="text-blue-600 font-semibold">{edu.institution}</p>
+                <div className="flex items-start gap-5">
+                  <div className="flex h-16 w-16 shrink-0 items-center justify-center overflow-hidden rounded-2xl border border-slate-200 bg-white p-2 shadow-sm">
+                    {edu.logo ? (
+                      <img src={edu.logo} alt={edu.logoAlt} className="h-full w-full object-contain" />
+                    ) : idx === 2 ? (
+                      <GraduationCap className="h-8 w-8 text-blue-600" aria-label="Senior secondary education" />
+                    ) : (
+                      <School className="h-8 w-8 text-blue-600" aria-label="Secondary education" />
+                    )}
                   </div>
-                  <span className="text-sm font-semibold text-slate-500 bg-slate-100 px-3 py-1 rounded-full">{edu.year}</span>
+                  <div className="min-w-0 flex-1">
+                    <div className="mb-2 flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
+                      <div>
+                        <h3 className="text-xl font-bold text-slate-900">{edu.degree}</h3>
+                        <p className="text-blue-600 font-semibold">{edu.institution}</p>
+                      </div>
+                      <span className="w-fit shrink-0 rounded-full bg-slate-100 px-3 py-1 text-sm font-semibold text-slate-500">{edu.year}</span>
+                    </div>
+                    <p className="text-slate-600">{edu.details}</p>
+                  </div>
                 </div>
-                <p className="text-slate-600">{edu.details}</p>
               </Card>
             ))}
           </div>
